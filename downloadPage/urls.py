@@ -1,6 +1,7 @@
-from django.urls import path, include
-from downloadPage.views import index
+from django.urls import path
+from downloadPage.views import index, download
 
 urlpatterns = [
-    path('', index)
+    path('', index),
+    path('download', download)
 ]
