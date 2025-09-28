@@ -3,5 +3,5 @@ from downloadPage.views import index, download
 
 urlpatterns = [
     path('', index),
-    path('download', download)
+    path('download/<str:name>/', download)
 ]
