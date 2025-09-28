@@ -1,10 +1,26 @@
 {% extends "layout.html" %}
 
 {% block title %}Home{% endblock %}
-{% block head %}<link rel="stylesheet" href="static/styles.css">{% endblock %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="static/styles.css">
+{% endblock %}
 
 {% block body %}
-{% load static %}
-    <h1>Downloads:</h1>
-    <a href="/download" download><h1>hi</h1></a>
+
+    <h1>Download Prism Plus:</h1>
+    
+    <div id="chart-grid">
+        {% for chart, imagePath in charts.items %}
+            <div class="card song-card" style="width: 18rem;">
+                <img src="{% static imagePath %}" class="card-img-top" alt="No Image Avilable">
+                <div class="card-body">
+                    <h5 class="card-title">{{ chart }}</h5>
+                    <p></p>
+                    <a href="/download" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
 {% endblock %}
