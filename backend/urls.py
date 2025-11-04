@@ -20,7 +20,7 @@ from django.urls import path, include
 from downloadPage import urls as downloadPageUrls
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path('', include(downloadPageUrls))
 ]
 

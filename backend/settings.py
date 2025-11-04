@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    #'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -124,6 +124,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
 	BASE_DIR / join(BASE_DIR, 'downloadPage/static')
 ]
+STATIC_ROOT = BASE_DIR / 'productionStatic'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
