@@ -1,0 +1,13 @@
+services:
+  
+  web:
+    # What dockerfile to run (looks for it automatically)
+    build: .
+    container_name: adxDownloads
+    # Exposes ports from 8000 to 8000
+    ports:
+      - 8000:8000
+    volumes:
+      - ./adxDownloads:/app
+    env_file:
+      - .env

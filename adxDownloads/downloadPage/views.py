@@ -10,15 +10,11 @@ def index(request):
     for zipName in os.listdir(f"downloadPage/static/charts/{VERSION}"):
         chartName = zipName.split(".zip")[0]
         charts[chartName] = ""     
-
     for imageName in os.listdir(f"downloadPage/static/images"):
         charts[imageName.split(".")[0]] = (f"images/{imageName}")
 
     return render(request, "index.html", {"charts": charts})
 
 def download(request, name):
-    # Todo:
-        # Based on query parameter, return the corresponding zip file to the client.
-
     print(name)
     return FileResponse(open(f"downloadPage/static/charts/PRISM PLUS/{name}.zip", 'rb'))
