@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -122,7 +122,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-	BASE_DIR / join(BASE_DIR, 'downloadPage/static')
+	BASE_DIR / 'downloadPage' /'static'
 ]
 STATIC_ROOT = BASE_DIR / 'productionStatic'
 
